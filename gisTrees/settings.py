@@ -86,20 +86,20 @@ WSGI_APPLICATION = 'gisTrees.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": os.getenv('DB_HOST'),
-        "NAME": os.getenv('DB_NAME'),
-        "PASSWORD": os.getenv('DB_PASSWORD'),
-        "PORT": 5432,
-        "USER": os.getenv('DB_USER'),
-    }
-}
-
 # DATABASES = {
-#     "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     "default": {
+#         "ENGINE": "django.contrib.gis.db.backends.postgis",
+#         "HOST": os.getenv('DB_HOST'),
+#         "NAME": os.getenv('DB_NAME'),
+#         "PASSWORD": os.getenv('DB_PASSWORD'),
+#         "PORT": 5432,
+#         "USER": os.getenv('DB_USER'),
+#     }
 # }
+
+DATABASES = {
+    "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
