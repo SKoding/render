@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['75.119.145.120','localhost']
+ALLOWED_HOSTS = ['tpk.onrender.com','localhost']
 
 
 # Application definition
